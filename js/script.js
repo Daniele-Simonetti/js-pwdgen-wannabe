@@ -14,8 +14,13 @@ console.log('Cognome utente', Cognome);
 // 3.chiedi all'utente il suo colore preferito
 let Colore = prompt('Inserisci il tuo colore preferito');
 console.log('Colore preferito utente', Colore);
-// 4.genera la password unendo le parole e aggiungendo alla fine 21
-let Password = Nome + Cognome + Colore + 21;
-console.log('Password per utente', Password);
+// 4.genera la password unendo le parole
+let PrimaPartePassword = Nome + Cognome + Colore;
+console.log('prima parte password per utente', PrimaPartePassword);
+// 5.completa la password aggiungendo il numero 21
+let PasswordCompleta = PrimaPartePassword + 21;
+console.log(PasswordCompleta);
 
-// genera la password sullo schermo
+// 6.genera la password sullo schermo
+document.getElementById('genera_password').innerHTML =  PasswordCompleta;
+console.log('Password completa', PasswordCompleta);
